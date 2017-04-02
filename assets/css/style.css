@@ -1,0 +1,23 @@
+.main-content {
+  float: left;
+  margin-top: 25px;
+  width: 59%;
+  padding-left: 100px;
+}
+
+#formHere {
+  float: left;
+  width: 29%;
+}
+
+.tvShowButtons {
+  margin-right: 10px;
+}
+
+.tvShowDiv {
+  display: inline-block;
+}
+
+body {
+  background-image: url("../images/backgroundImage.png"); 
+}

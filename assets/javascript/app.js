@@ -1,4 +1,5 @@
-var topics = ["Goku", "Gohan", "Vegeta", "Krillin"];
+//jshint esversion: 6
+var topics = ["Psych", "Suits", "The Walking Dead", "The Fresh Prince of Bel-air"];
 var grabButtons;
 var attribute;
 var newButtonValue;
@@ -24,7 +25,7 @@ function get(url) {
 }
 
 function createButtons() {
-  for (var i = 0; i < topics.length; i++) {
+  for (var i in topics) {
     var newDiv = document.createElement("div");
     var newButton = document.createElement("button");
     newButton.setAttribute("class", "tvShowButtons");
@@ -61,6 +62,7 @@ function buttonsClicked(event) {
         var results = response.data;
         for (var i = 0; i < results.length; i++) {
           var gifDiv = document.createElement("div");
+          gifDiv.setAttribute("class", "tvShowDiv");
           var gifImage = document.createElement("img");
           gifImage.setAttribute("src", results[i].images.fixed_height_still.url );
           gifImage.setAttribute("data-animate", results[i].images.fixed_height.url);
