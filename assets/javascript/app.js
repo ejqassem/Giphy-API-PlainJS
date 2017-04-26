@@ -55,7 +55,7 @@ function buttonsClicked(event) {
     attribute = grabButtons[i].getAttribute("data-show");
     if (attribute === event.target.innerHTML) {
       var search = event.target.innerHTML;
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=10";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=10";
 
       var promise = get(queryURL);
       promise.then(function(response) {
